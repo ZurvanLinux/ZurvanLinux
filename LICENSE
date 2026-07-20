@@ -1,32 +1,35 @@
-Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+Attribution-ShareAlike 4.0 International
+
+=======================================================================
 
 Creative Commons Corporation ("Creative Commons") is not a law firm and
-does not provide legal services or legal advice. Distribution of Creative
-Commons public licenses does not create a lawyer-client or other
-relationship. Creative Commons makes its licenses and related information
-available on an "as-is" basis. Creative Commons gives no warranties
-regarding its licenses, any material licensed under their terms and
-conditions, or any related information. Creative Commons disclaims all
-liability for damages resulting from their use to the fullest extent
-possible.
+does not provide legal services or legal advice. Distribution of
+Creative Commons public licenses does not create a lawyer-client or
+other relationship. Creative Commons makes its licenses and related
+information available on an "as-is" basis. Creative Commons gives no
+warranties regarding its licenses, any material licensed under their
+terms and conditions, or any related information. Creative Commons
+disclaims all liability for damages resulting from their use to the
+fullest extent possible.
 
 Using Creative Commons Public Licenses
 
 Creative Commons public licenses provide a standard set of terms and
 conditions that creators and other rights holders may use to share
-original works of authorship and other material subject to copyright and
-certain other rights specified in the public license below. The
+original works of authorship and other material subject to copyright
+and certain other rights specified in the public license below. The
 following considerations are for informational purposes only, are not
 exhaustive, and do not form part of our licenses.
 
-     Considerations for licensors: Our public licenses are intended for
-     use by those authorized to give the public permission to use
-     material in ways otherwise restricted by copyright and certain
-     other rights. Our licenses are irrevocable. Licensors should read
-     and understand the terms and conditions of the license they choose
-     before applying it. Licensors should also secure all rights
-     necessary before applying our licenses so that the public can
-     reuse the material as expected. Licensors should clearly mark any
+     Considerations for licensors: Our public licenses are
+     intended for use by those authorized to give the public
+     permission to use material in ways otherwise restricted by
+     copyright and certain other rights. Our licenses are
+     irrevocable. Licensors should read and understand the terms
+     and conditions of the license they choose before applying it.
+     Licensors should also secure all rights necessary before
+     applying our licenses so that the public can reuse the
+     material as expected. Licensors should clearly mark any
      material not subject to the license. This includes other CC-
      licensed material, or material used under an exception or
      limitation to copyright. More considerations for licensors:
@@ -34,19 +37,22 @@ exhaustive, and do not form part of our licenses.
 
      Considerations for the public: By using one of our public
      licenses, a licensor grants the public permission to use the
-     licensed material under specified terms and conditions. If the
-     licensor's permission is not necessary for any reason — for
+     licensed material under specified terms and conditions. If
+     the licensor's permission is not necessary for any reason--for
      example, because of any applicable exception or limitation to
-     copyright — then that use is not regulated by the license. Our
-     licenses grant only permissions under copyright and certain other
-     rights that a licensor has authority to grant. Use of the
-     licensed material may still be restricted for other reasons,
-     including because others have copyright or other rights in the
-     material. A licensor may make special requests, such as asking
-     that all changes be marked or described. Although not required by
-     our licenses, you are encouraged to respect those requests within
-     reason. More considerations for the public:
+     copyright--then that use is not regulated by the license. Our
+     licenses grant only permissions under copyright and certain
+     other rights that a licensor has authority to grant. Use of
+     the licensed material may still be restricted for other
+     reasons, including because others have copyright or other
+     rights in the material. A licensor may make special requests,
+     such as asking that all changes be marked or described.
+     Although not required by our licenses, you are encouraged to
+     respect those requests where reasonable. More considerations
+     for the public:
      wiki.creativecommons.org/Considerations_for_licensees
+
+=======================================================================
 
 Creative Commons Attribution-ShareAlike 4.0 International Public
 License
@@ -58,7 +64,9 @@ License"). To the extent this Public License may be interpreted as a
 contract, You are granted the Licensed Rights in consideration of Your
 acceptance of these terms and conditions, and the Licensor grants You
 such rights in consideration of benefits the Licensor receives from
-making the Licensed Material available under these terms and conditions.
+making the Licensed Material available under these terms and
+conditions.
+
 
 Section 1 -- Definitions.
 
@@ -131,6 +139,7 @@ Section 1 -- Definitions.
   m. You means the individual or entity exercising the Licensed Rights
      under this Public License. Your has a corresponding meaning.
 
+
 Section 2 -- Scope.
 
   a. License grant.
@@ -179,11 +188,19 @@ Section 2 -- Scope.
                exercise the Licensed Rights in the Adapted Material
                under the conditions of the Adapter's License You apply.
 
-       6. No downstream restrictions. You may not offer or impose any
-          additional or different terms or conditions on, or apply any
-          Effective Technological Measures to, the Licensed Material if
-          doing so restricts exercise of the Licensed Rights by any
-          recipient of the Licensed Material.
+            c. No downstream restrictions. You may not offer or impose
+               any additional or different terms or conditions on, or
+               apply any Effective Technological Measures to, the
+               Licensed Material if doing so restricts exercise of the
+               Licensed Rights by any recipient of the Licensed
+               Material.
+
+       6. No endorsement. Nothing in this Public License constitutes or
+          may be construed as permission to assert or imply that You
+          are, or that Your use of the Licensed Material is, connected
+          with, or sponsored, endorsed, or granted official status by,
+          the Licensor or others designated to receive attribution as
+          provided in Section 3(a)(1)(A)(i).
 
   b. Other rights.
 
@@ -198,12 +215,13 @@ Section 2 -- Scope.
        2. Patent and trademark rights are not licensed under this
           Public License.
 
-       3. To the fullest extent possible, the Licensor waives any
-          right to collect royalties from You for the exercise of the
-          Licensed Rights, whether directly or through a collecting
-          society under any voluntary or waivable statutory or
-          compulsory licensing scheme. In all other cases the Licensor
-          expressly reserves the right to collect such royalties.
+       3. To the extent possible, the Licensor waives any right to
+          collect royalties from You for the exercise of the Licensed
+          Rights, whether directly or through a collecting society
+          under any voluntary or waivable statutory or compulsory
+          licensing scheme. In all other cases the Licensor expressly
+          reserves any right to collect such royalties.
+
 
 Section 3 -- License Conditions.
 
@@ -218,21 +236,21 @@ following conditions.
             a. retain the following if it is supplied by the Licensor
                with the Licensed Material:
 
-                i. identification of the creator(s) of the Licensed
-                   Material and any others designated to receive
-                   attribution, in any reasonable manner requested by
-                   the Licensor (including by pseudonym if
-                   designated);
+                 i. identification of the creator(s) of the Licensed
+                    Material and any others designated to receive
+                    attribution, in any reasonable manner requested by
+                    the Licensor (including by pseudonym if
+                    designated);
 
                 ii. a copyright notice;
 
-                iii. a notice that refers to this Public License;
+               iii. a notice that refers to this Public License;
 
                 iv. a notice that refers to the disclaimer of
                     warranties;
 
-                v. a URI or hyperlink to the Licensed Material to the
-                   extent reasonably practicable;
+                 v. a URI or hyperlink to the Licensed Material to the
+                    extent reasonably practicable;
 
             b. indicate if You modified the Licensed Material and
                retain an indication of any previous modifications; and
@@ -250,27 +268,27 @@ following conditions.
 
        3. If requested by the Licensor, You must remove any of the
           information required by Section 3(a)(1)(A) to the extent
-          doing so is reasonably practicable.
+          reasonably practicable.
 
   b. ShareAlike.
 
-       In addition to the conditions in Section 3(a), if You Share
-       Adapted Material You otherwise produce, the following conditions
-       also apply.
+     In addition to the conditions in Section 3(a), if You Share
+     Adapted Material You produce, the following conditions also apply.
 
        1. The Adapter's License You apply must be a Creative Commons
           license with the same License Elements, this version or
           later, or a BY-SA Compatible License.
 
-       2. You must include the text of, or the URI or hyperlink to,
-          the Adapter's License You apply. You may satisfy this
-          condition in any reasonable manner based on the medium,
-          means, and context in which You Share Adapted Material.
+       2. You must include the text of, or the URI or hyperlink to, the
+          Adapter's License You apply. You may satisfy this condition
+          in any reasonable manner based on the medium, means, and
+          context in which You Share Adapted Material.
 
-       3. You may not offer or impose any additional or different
-          terms or conditions on, or apply any Effective Technological
+       3. You may not offer or impose any additional or different terms
+          or conditions on, or apply any Effective Technological
           Measures to, Adapted Material that restrict exercise of the
           rights granted under the Adapter's License You apply.
+
 
 Section 4 -- Sui Generis Database Rights.
 
@@ -294,11 +312,12 @@ For the avoidance of doubt, this Section 4 supplements and does not
 replace Your obligations under this Public License where the Licensed
 Rights include other Copyright and Similar Rights.
 
+
 Section 5 -- Disclaimer of Warranties and Limitation of Liability.
 
   a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
-     EXTENT POSSIBLE, THE LICENSED MATERIAL IS PROVIDED ON AN "AS-IS"
-     BASIS, AND THE LICENSOR MAKES NO REPRESENTATIONS OR WARRANTIES OF
+     EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
+     AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
      ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
      IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
      WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
@@ -321,6 +340,7 @@ Section 5 -- Disclaimer of Warranties and Limitation of Liability.
      above shall be interpreted in a manner that, to the extent
      possible, most closely approximates an absolute disclaimer and
      waiver of all liability.
+
 
 Section 6 -- Term and Termination.
 
@@ -350,6 +370,7 @@ Section 6 -- Term and Termination.
   d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
      License.
 
+
 Section 7 -- Other Terms and Conditions.
 
   a. The Licensor shall not be bound by any additional or different
@@ -358,6 +379,7 @@ Section 7 -- Other Terms and Conditions.
   b. Any arrangements, understandings, or agreements regarding the
      Licensed Material not stated herein are separate from and
      independent of the terms and conditions of this Public License.
+
 
 Section 8 -- Interpretation.
 
@@ -374,7 +396,7 @@ Section 8 -- Interpretation.
      conditions.
 
   c. No term or condition of this Public License will be waived and no
-     failure to comply consented to unless expressly agreed by the
+     failure to comply consented to unless expressly agreed to by the
      Licensor.
 
   d. Nothing in this Public License constitutes or may be interpreted
@@ -382,12 +404,13 @@ Section 8 -- Interpretation.
      that apply to the Licensor or You, including from the legal
      processes of any jurisdiction or authority.
 
+
 =======================================================================
 
 Creative Commons is not a party to its public licenses.
 Notwithstanding, Creative Commons may elect to apply one of its public
 licenses to material it publishes and in those instances will be
-considered the "Licensor." The text of the Creative Commons public
+considered the “Licensor.” The text of the Creative Commons public
 licenses is dedicated to the public domain under the CC0 Public Domain
 Dedication. Except for the limited purpose of indicating that material
 is shared under a Creative Commons public license or as otherwise
@@ -396,10 +419,10 @@ creativecommons.org/policies, Creative Commons does not authorize the
 use of the trademark "Creative Commons" or any other trademark or logo
 of Creative Commons without its prior written consent including,
 without limitation, in connection with any unauthorized modifications
-to any of its public licenses or any other arrangements, understandings,
-or agreements concerning use of licensed material. Avoid using the
-trademark "Creative Commons" or any other trademark or logo of Creative
-Commons, except to refer to Creative Commons or its public licenses.
-No trademark rights are licensed under this Public License.
+to any of its public licenses or any other arrangements,
+understandings, or agreements concerning use of licensed material. For
+the avoidance of doubt, this paragraph does not form part of the public
+licenses.
 
 Creative Commons may be contacted at creativecommons.org.
+
