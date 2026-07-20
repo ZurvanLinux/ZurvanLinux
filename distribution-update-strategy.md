@@ -6,12 +6,13 @@
 ---
 
 ## 1. ISO Image Distribution Strategy
-Because of the large size of Linux installation ISOs (typically 2GB–3.5GB), traditional web hosting is not cost-effective. Zurvan Linux implements a hybrid distribution model utilizing **GitHub Releases** and **Cloudflare** for optimized delivery.
+Because of the large size of Linux installation ISOs (typically 2GB–3.5GB), traditional web hosting is not cost-effective. Zurvan Linux implements a hybrid distribution model utilizing **Cloudflare R2** (ISO storage), **GitHub Releases** (release notes + checksums), and **Cloudflare** (delivery) for optimized, zero-cost delivery.
 
 ### 1.1 Infrastructure Configuration
-*   **Storage Host:** Public **GitHub Releases** under the `ZurvanLinux` organization. GitHub provides unlimited bandwidth and storage for public releases, ensuring reliable downloads without hosting costs.
-*   **Routing & Delivery:** A dedicated subdomain (e.g., `download.zurvanlinux.org`) is managed through **Cloudflare**. 
-*   **Cloudflare Configuration:** Because Cloudflare’s free tier limits cached files to 512MB, the actual ISO binaries are not cached on Cloudflare. Instead, the download page and metadata are cached, and the download links redirect users securely to the raw GitHub Releases CDN. This setup prevents terms of service violations while providing a branded, reliable download URL.
+*   **Storage Host (ISO binary):** A public **Cloudflare R2** bucket under the Zurvan Linux Cloudflare account. R2 provides **zero-egress** object storage (downloads cost nothing, which matters for users on restricted/limited networks) and has **no per-file size cap**. This replaces an earlier plan to use GitHub Releases for the ISO itself — GitHub caps a single release asset at **2 GB**, which a full KDE ISO exceeds.
+*   **Release metadata:** **GitHub Releases** holds the per-version release notes and the `SHA256SUMS` file, and its body links to the R2 download URL. It is *not* used for the ISO binary.
+*   **Routing & Delivery:** A dedicated subdomain (`download.zurvanlinux.org`) is bound to the R2 bucket as a **Cloudflare custom domain**; Cloudflare serves the object directly (HTTP range + resumable downloads).
+*   **Cloudflare Configuration:** Cloudflare's free tier limits cached files to 512 MB, so ISO binaries (>512 MB) are **not** edge-cached — they stream from the R2 origin on each request. Because R2 egress is free, this incurs no cost. The download page and small metadata are cached at the edge as usual.
 
 ---
 
@@ -19,11 +20,13 @@ Because of the large size of Linux installation ISOs (typically 2GB–3.5GB), tr
 For custom packages developed specifically for Zurvan Linux (such as `zurvan-dns-bypass`, visual assets, and configuration tweaks), a custom APT repository is hosted directly on GitHub Pages.
 
 ```
-                          ┌───► GitHub Releases (Hosts raw system ISO files)
-                          │
-User ───► Cloudflare ─────┼───► GitHub Pages (Hosts custom APT repo - deb files & indices)
-                          │
-                          └───► GitHub Pages (Hosts static project landing page)
+                           ┌───► Cloudflare R2 (Hosts raw system ISO files; zero-egress)
+                           │
+User ───► Cloudflare ─────┼───► GitHub Releases (Release notes + SHA256SUMS; links to R2)
+                           │
+                           ├───► GitHub Pages (Hosts custom APT repo - deb files & indices)
+                           │
+                           └───► GitHub Pages (Hosts static project landing page)
 ```
 
 ### 2.1 Repository Hosting Configuration
