@@ -1,12 +1,12 @@
 # Zurvan Linux: UI/UX & Localization Plan
 **Version:** 1.0 (Phase 1)  
-**Target Desktop Environment:** KDE Plasma 6.7  
+**Target Desktop Environment:** KDE Plasma (latest stable)  
 **Language Focus:** Persian (Farsi) & English (Bilingual)  
 
 ---
 
 ## 1. Design Philosophy & UI/UX Goals
-The design philosophy of **Zurvan Linux** is to combine the robustness of Debian with a modern, elegant, and Persian-centric visual experience. To compete directly with the aesthetic appeal of Ubuntu and Linux Mint, Zurvan Linux leverages the extensive customization capabilities of **KDE Plasma 6.7**.
+The design philosophy of **Zurvan Linux** is to combine the robustness of Debian with a modern, elegant, and Persian-centric visual experience. To compete directly with the aesthetic appeal of Ubuntu and Linux Mint, Zurvan Linux leverages the extensive customization capabilities of **KDE Plasma (latest stable)**.
 
 The user interface is crafted to feel natural for Persian-speaking users through optimized Right-to-Left (RTL) mirroring, crisp typography, and unified system-wide branding, while maintaining a clean, familiar layout for global users.
 
@@ -26,7 +26,7 @@ To enforce this typography globally (including in web browsers like Firefox/Chro
 ---
 
 ## 3. Right-to-Left (RTL) Layout Strategy
-KDE Plasma 6.7 provides robust native support for RTL rendering. Zurvan Linux configures locale settings to automatically mirror the workspace when the Persian language is selected.
+KDE Plasma provides robust native support for RTL rendering. Zurvan Linux configures locale settings to automatically mirror the workspace when the Persian language is selected.
 
 *   **Taskbar & Panels:** When Farsi is active, the panel mirrors automatically: the Application Menu (Start Menu) aligns to the bottom-right corner, and the System Tray (clock, network, volume) moves to the bottom-left.
 *   **Window Decorations:** Window title text aligns to the right side of the title bar, and window control buttons (Close, Maximize, Minimize) adapt to standard RTL patterns.

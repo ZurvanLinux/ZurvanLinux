@@ -1,8 +1,8 @@
 # Zurvan Linux: Testing & Quality Assurance (QA) Checklist
 **Version:** 1.0 (Phase 1)  
 **Target Platform:** 64-bit PC (`amd64`)  
-**Base Distribution:** Debian 13 (Trixie)  
-**Desktop Environment:** KDE Plasma 6.7  
+**Base Distribution:** Debian Stable  
+**Desktop Environment:** KDE Plasma (latest stable)  
 
 This document serves as the standard operational checklist for testing and validating each build of the **Zurvan Linux** installation ISO image. All checks must be verified in both virtualized environments (e.g., VirtualBox, QEMU/KVM) and on physical hardware before a release is promoted to public status.
 

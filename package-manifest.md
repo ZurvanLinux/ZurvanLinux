@@ -1,7 +1,7 @@
 # Zurvan Linux: Package Manifest & Software Manifest
 **Version:** 1.0 (Phase 1)  
-**Target OS Base:** Debian 13 (Trixie) `amd64`  
-**Desktop Environment:** KDE Plasma 6.7  
+**Target OS Base:** Debian Stable `amd64`  
+**Desktop Environment:** KDE Plasma (latest stable)  
 
 This document details the curated list of pre-installed system packages, desktop environment components, multimedia libraries, and custom utilities included in the default ISO image of **Zurvan Linux**. These packages are configured to build via Debian’s `live-build` utility.
 
@@ -34,7 +34,7 @@ These components manage user authentication and the initial graphical login scre
 
 ---
 
-## 3. KDE Plasma 6.7 Desktop Environment
+## 3. KDE Plasma Desktop Environment
 The core desktop environment packages, applets, and session managers.
 
 | Package Name | Function / Description |

@@ -20,7 +20,7 @@ If prose in a doc conflicts with what the codebase eventually does, trust the co
 
 ## Toolchain (when implementation begins)
 
-- **ISO build:** Debian `live-build` (explicitly stated in `package-manifest.md`). The eventual tree will be `auto/`, `config/` (package-lists, hooks, includes.chroot), built with `lb build` on a Debian 13 host.
+- **ISO build:** Debian `live-build` (explicitly stated in `package-manifest.md`). The eventual tree will be `auto/`, `config/` (package-lists, hooks, includes.chroot), built with `lb build` on a Debian Stable host.
 - **Custom APT repo:** hosted on GitHub Pages at `repo.zurvanlinux.org`, proxied via Cloudflare, GPG-signed with a 4096-bit key. Public key at `/public.key`, registered on installed systems at `/etc/apt/keyrings/zurvan-archive-keyring.gpg`.
 - **Installer:** Calamares with Debian settings modules + custom Zurvan branding.
 
@@ -28,8 +28,8 @@ If prose in a doc conflicts with what the codebase eventually does, trust the co
 
 Do not deviate from these without explicit approval — they are core product decisions, not implementation details:
 
-- **Base:** Debian 13 (Trixie) Stable. **Phase 1 arch: `amd64` only.** `arm64` is explicitly deferred to Phase 2.
-- **Desktop:** KDE Plasma 6.7, **Wayland by default with X11 fallback** (not the reverse).
+- **Base:** Debian Stable. **Phase 1 arch: `amd64` only.** `arm64` is explicitly deferred to Phase 2.
+- **Desktop:** KDE Plasma (latest stable), **Wayland by default with X11 fallback** (not the reverse).
 - **Repositories enabled by default:** `contrib`, `non-free`, and `non-free-firmware` (firmware-iwlwifi, firmware-realtek, firmware-atheros, etc. must be pre-installed).
 - **Fonts:** `fonts-vazirmatn` is the system-wide default; `Vazirmatn UI FD` (Farsi Digits) for Konsole/editors. Enforced via a custom fontconfig at `/etc/fonts/local.conf`.
 - **Input:** Persian layout per **ISIRI 9147**; ZWNJ on `Shift+Space`; layout toggle `Alt+Shift` / `Super+Space`; layouts `us` + `ir`.
