@@ -2,27 +2,27 @@
 **Version:** 1.0 (Phase 1)  
 **Status:** Approved  
 **Target Architecture:** 64-bit PC (`amd64`)  
-**Base Distribution:** Debian 13 (Trixie)  
+**Base Distribution:** Debian Stable  
 
 ---
 
 ## 1. Project Overview
-Zurvan Linux is an open-source, community-driven operating system designed for Persian-speaking users and developers. Named after *Zurvan*, the ancient Iranian deity of infinite time and stability, the distribution is built upon the rock-solid foundation of Debian 13 (Trixie). 
+Zurvan Linux is an open-source, community-driven operating system designed for Persian-speaking users and developers. Named after *Zurvan*, the ancient Iranian deity of infinite time and stability, the distribution is built upon the rock-solid foundation of Debian Stable. 
 
-The project aims to deliver a modern, visually compelling desktop environment utilizing **KDE Plasma 6.7**, featuring out-of-the-box hardware compatibility, robust Persian localization, seamless Flatpak integration, and modular network-bypass tools tailored for developers in restricted network environments.
+The project aims to deliver a modern, visually compelling desktop environment utilizing **KDE Plasma (latest stable)**, featuring out-of-the-box hardware compatibility, robust Persian localization, seamless Flatpak integration, and modular network-bypass tools tailored for developers in restricted network environments.
 
 ---
 
 ## 2. Core System Architecture
 
 ### 2.1 Base System
-*   **Upstream Base:** Debian 13 (Trixie) Stable.
+*   **Upstream Base:** Debian Stable.
 *   **CPU Architecture (Phase 1):** `amd64` (64-bit Intel/AMD PCs). *Note: `arm64` (AArch64) support is planned for Phase 2.*
 *   **Init System:** `systemd` (default Debian configuration).
 *   **Bootloader:** GRUB 2 with dual-boot (UEFI and Legacy BIOS) support.
 
 ### 2.2 Kernel & Driver Stack
-*   **System Kernel:** Debian 13 default Linux kernel, with optional automated migration to the Debian Backports kernel for newer hardware enablement (HWE).
+*   **System Kernel:** Debian Stable default Linux kernel, with optional automated migration to the Debian Backports kernel for newer hardware enablement (HWE).
 *   **Hardware Firmware:** The `contrib`, `non-free`, and `non-free-firmware` repository areas are enabled by default. The following firmware packages are pre-installed in the ISO:
     *   `firmware-linux`, `firmware-linux-nonfree`
     *   `firmware-iwlwifi` (Intel Wireless support)
@@ -36,7 +36,7 @@ The project aims to deliver a modern, visually compelling desktop environment ut
 ## 3. Desktop Environment & UI/UX
 
 ### 3.1 Graphical Interface
-*   **Desktop Environment:** KDE Plasma 6.7 (Wayland session by default, with X11 fallback).
+*   **Desktop Environment:** KDE Plasma (latest stable) — Wayland session by default, with X11 fallback.
 *   **Display Manager:** SDDM (Simple Desktop Display Manager) with a customized, branded dark theme.
 *   **Window Manager:** KWin (configured with hardware-accelerated blur, desktop effects, and smooth transitions).
 

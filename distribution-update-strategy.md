@@ -1,7 +1,7 @@
 # Zurvan Linux: Distribution & Update Strategy
 **Version:** 1.0 (Phase 1)  
 **Infrastructure Base:** GitHub & Cloudflare  
-**Target OS Base:** Debian 13 (Trixie) `amd64`  
+**Target OS Base:** Debian Stable `amd64`  
 
 ---
 

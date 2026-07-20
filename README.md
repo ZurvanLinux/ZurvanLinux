@@ -2,7 +2,7 @@
 
 > Authoritative specification documents for the Zurvan Linux distribution.
 
-This repository holds the **source-of-truth specification** for Zurvan Linux — a Debian 13 (Trixie)–based, Persian-first desktop distribution running KDE Plasma 6.7 on Wayland. No source code, build artifacts, or packages live here; this is the planning and design home that all other repositories in the [`ZurvanLinux`](https://github.com/ZurvanLinux) org implement against.
+This repository holds the **source-of-truth specification** for Zurvan Linux — a Debian Stable–based, Persian-first desktop distribution running KDE Plasma (latest stable) on Wayland. No source code, build artifacts, or packages live here; this is the planning and design home that all other repositories in the [`ZurvanLinux`](https://github.com/ZurvanLinux) org implement against.
 
 ## Documents
 
