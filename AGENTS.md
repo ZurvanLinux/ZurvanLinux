@@ -13,7 +13,7 @@ The five root-level `.md` files are the source of truth for scope and behavior. 
 - `technical-spec-architecture.md` — system architecture, kernel/driver stack, desktop environment, Calamares installer.
 - `package-manifest.md` — exact pre-installed package list (apt + flatpak + codecs + fonts + custom utils).
 - `ui-ux-localization-plan.md` — Vazirmatn typography, RTL layout, Persian keyboard (ISIRI 9147), branding.
-- `distribution-update-strategy.md` — ISO delivery (GitHub Releases + Cloudflare), custom APT repo, GPG signing.
+- `distribution-update-strategy.md` — ISO delivery (Cloudflare R2 + Cloudflare; GitHub Releases holds notes + SHA256), custom APT repo, GPG signing.
 - `testing-qa-checklist.md` — release-validation checklist (boot, installer, localization, hardware, repos).
 
 If prose in a doc conflicts with what the codebase eventually does, trust the codebase — but flag the divergence.
