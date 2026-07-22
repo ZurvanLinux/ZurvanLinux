@@ -40,11 +40,24 @@ User ───► Cloudflare ─────┼───► GitHub Releases (Rel
 ---
 
 ## 3. Repository Integrity & Cryptographic Security
-To maintain standard Debian security policies, the package repository is cryptographically signed.
 
-*   **Signing Key:** A dedicated 4096-bit GPG key is generated and managed by the core Zurvan development team.
-*   **Metadata Verification:** Every repository update automatically signs the `Release` file, creating `Release.gpg` (detached signature) and `InRelease` (clear-signed) files.
-*   **Public Key Distribution:** The public GPG key is hosted at `https://repo.zurvanlinux.org/public.key`. During installation, the Calamares installer automatically registers this key in the user's system keyring (`/etc/apt/keyrings/zurvan-archive-keyring.gpg`) to prevent unsigned repository warnings.
+**GPG key architecture:**
+- A 4096-bit RSA primary key is generated offline / air-gapped by the core Zurvan
+  development team and never leaves that machine.
+- From that primary key, a signing-only subkey is derived for CI use.
+- The public key is committed to the `apt-repository` repository root as
+  `public.key` and served at `https://repo.zurvanlinux.org/public.key`.
+- During installation, the Calamares installer registers this key in the user's
+  system keyring (`/etc/apt/keyrings/zurvan-archive-keyring.gpg`) to prevent
+  unsigned repository warnings.
+
+**Signing in CI:**
+- The signing-only subkey is stored as the `APT_SIGNING_SUBKEY` GitHub Actions
+  secret in the `apt-repository` repo.
+- The subkey passphrase is stored as the `APT_SIGNING_PASSPHRASE` secret.
+- The `publish-repo.yml` workflow imports the subkey, signs `Release` into
+  `Release.gpg` (detached) and `InRelease` (clear-signed), self-verifies, then
+  strips the subkey before the job ends.
 
 ---
 

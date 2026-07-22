@@ -9,7 +9,7 @@
 ## 1. Project Overview
 Zurvan Linux is an open-source, community-driven operating system designed for Persian-speaking users and developers. Named after *Zurvan*, the ancient Iranian deity of infinite time and stability, the distribution is built upon the rock-solid foundation of Debian Stable. 
 
-The project aims to deliver a modern, visually compelling desktop environment utilizing **KDE Plasma (latest stable)**, featuring out-of-the-box hardware compatibility, robust Persian localization, seamless Flatpak integration, and modular network-bypass tools tailored for developers in restricted network environments.
+The project aims to deliver a modern, visually compelling desktop environment utilizing **KDE Plasma (latest stable)**, featuring out-of-the-box hardware compatibility, robust Persian localization, seamless Flatpak integration, modular network-bypass tools tailored for developers in restricted network environments, and reproducible distribution/update tooling via GitHub Actions and Cloudflare.
 
 ---
 
@@ -24,9 +24,10 @@ The project aims to deliver a modern, visually compelling desktop environment ut
 ### 2.2 Kernel & Driver Stack
 *   **System Kernel:** Debian Stable default Linux kernel, with optional automated migration to the Debian Backports kernel for newer hardware enablement (HWE).
 *   **Hardware Firmware:** The `contrib`, `non-free`, and `non-free-firmware` repository areas are enabled by default. The following firmware packages are pre-installed in the ISO:
-    *   `firmware-linux`, `firmware-linux-nonfree`
-    *   `firmware-iwlwifi` (Intel Wireless support)
-    *   `firmware-realtek`, `firmware-atheros` (broad network hardware support)
+  * `firmware-linux`, `firmware-linux-nonfree`
+  * `firmware-iwlwifi` (Intel Wireless support)
+  * `firmware-realtek`, `firmware-atheros`, `firmware-b43`, `firmware-brcm80211`
+  * `linux-firmware` (common device firmware for network, GPU, and peripheral hardware)
 *   **Graphics Stack:** 
     *   Mesa drivers for open-source Intel and AMD GPU acceleration.
     *   Integrated `nvidia-detect` utility to assist users in installing proprietary NVIDIA drivers.
@@ -76,7 +77,19 @@ To ensure out-of-the-box playback for all common media formats without additiona
 
 ---
 
-## 6. Iranian Localization & Developer Utilities
+## 6. Project Identity Package (`zurvan-base-files`)
+A small project-built package layered into the live image to carry distributor
+metadata used by GRUB and the installer:
+- `/etc/os-release` distributor ID / name / version.
+- GRUB distributor hook so the bootloader labels the entry "Zurvan Linux"
+  instead of the upstream Debian string.
+
+This package is built in CI by `iso-builder` and staged locally during image
+assembly. It is not yet published to the custom APT repo.
+
+---
+
+## 7. Iranian Localization & Developer Utilities
 
 ### 6.1 Modular Network Bypass (`zurvan-dns-bypass`)
 A custom, optional meta-package developed under the Zurvan project to mitigate access restrictions and sanctions on global developer tools (e.g., Docker Hub, Android SDK, Google Developers).
@@ -88,7 +101,7 @@ A custom, optional meta-package developed under the Zurvan project to mitigate a
 
 ---
 
-## 7. Installation Framework
+## 8. Installation Framework
 
 ### 7.1 Graphical Installer
 *   **Framework:** **Calamares Installer** (customized brand-matching styling).

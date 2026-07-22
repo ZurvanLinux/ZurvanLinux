@@ -6,6 +6,20 @@
 
 This document serves as the standard operational checklist for testing and validating each build of the **Zurvan Linux** installation ISO image. All checks must be verified in both virtualized environments (e.g., VirtualBox, QEMU/KVM) and on physical hardware before a release is promoted to public status.
 
+## 0. CI / Automation Gate
+Before a pre-release is tagged, the following automated checks must pass on the
+target branch:
+- `iso-builder` build pipeline completes and produces a bootable ISO artifact.
+- `iso-builder` shellcheck / yamllint / bash -n pass.
+- `iso-builder` upgrade-path validation tests pass.
+- `apt-repository` publish pipeline regenerates indices and `Release.gpg` /
+  `InRelease` verify successfully.
+- `website` Astro `check` / `build` pass.
+
+Note: `zurvan-dns-bypass` verification is blocked until Phase 2 (`M2.2`).
+Calamares branding / welcome-screen checks are blocked until Phase 3.
+The `download.zurvanlinux.org` download-check is blocked until Phase 5.
+
 ---
 
 ## 1. Boot & Live Environment Verification
