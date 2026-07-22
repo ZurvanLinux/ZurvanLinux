@@ -3,6 +3,13 @@
 **Target OS Base:** Debian Stable `amd64`  
 **Desktop Environment:** KDE Plasma (latest stable)
 
+**Debian Stable / Plasma 6 substitutions** (from `iso-builder`):
+- `plasma-workspace-wayland` → folded into `plasma-workspace` in Plasma 6.
+- `khotkeys` → removed in Plasma 6; global shortcuts now use KDE's built-in accel.
+- `spectacle` → renamed to `kde-spectacle` in current Debian Stable.
+- `fonts-vazirmatn` "Vazirmatn UI FD" monospace → **divergence:** Debian package ships only proportional Vazirmatn; monospace variant deferred to Phase 2 (`branding-assets` M2.1).
+- `zurvan-dns-bypass` → **divergence:** custom Phase 2 package; commented in live-build until built and published.
+
 This document details the curated list of pre-installed system packages, desktop environment components, multimedia libraries, and custom utilities included in the default ISO image of **Zurvan Linux**. These packages are configured to build via Debian’s `live-build` utility.
 
 ---
@@ -92,13 +99,14 @@ The core desktop environment packages, applets, and session managers.
 | Package Name | Function / Description |
 |---|---|
 | `plasma-desktop` | Core KDE Plasma desktop shell |
-| `plasma-workspace-wayland` | Wayland display server workspace session |
+| `plasma-workspace` | Workspace shell and Wayland session provider |
 | `plasma-nm` | System tray applet for Network Manager |
 | `plasma-pa` | System tray applet for PulseAudio/PipeWire volume control |
 | `kscreen` | Display configuration and multi-monitor management |
 | `powerdevil` | Power management daemon and UI configurations |
 | `kde-style-breeze` | Default Breeze widget style and window decorations |
-| `khotkeys` | Global keyboard shortcut manager |
+| `bluedevil` | KDE Bluetooth device manager and integration |
+| `kde-inotify-survey` | Warns when apps are using all inotify watches and prompts the user to raise it |
 | `bluedevil` | KDE Bluetooth device manager and integration |
 | `kde-inotify-survey` | Warns when apps are using all inotify watches and prompts the user to raise it |
 
@@ -112,7 +120,7 @@ Native desktop utilities configured with optimized Persian layout settings.
 | `dolphin` | Highly customizable file manager |
 | `konsole` | Advanced terminal emulator |
 | `systemsettings` | KDE system configuration panel |
-| `spectacle` | Screenshot and screen capture utility |
+| `kde-spectacle` | Screenshot and screen capture utility |
 | `ark` | Archive compression and extraction manager |
 | `kwrite` | Lightweight text editor |
 | `kcalc` | Scientific graphical calculator |
@@ -237,10 +245,7 @@ This infrastructure integrates the Discover Software Center with the global Flat
 | `flatpak` | Universal sandboxed package management runtime |
 | `plasma-discover` | KDE graphical software center |
 | `plasma-discover-backend-flatpak` | Flatpak integration backend for Discover |
-| `com.visualstudio.code` | Visual Studio Code via Flathub |
-| `com.obsproject.Studio` | Latest OBS Studio delivered via Flathub (`com.obsproject.Studio`) |
-| `org.gahshomar.Gahshomar` | Persian/Jalali/Farsi calendar app via Flathub |
-| `com.leinardi.gst` | Task manager with Getting Things Done support via Flathub |
+
 
 ---
 
@@ -254,6 +259,8 @@ Provides optimized rendering for Persian (Farsi), Arabic, and Latin text layouts
 | `noto-color-emoji` | Color emoji font support |
 | `fonts-unifont` | Comprehensive fallback font covering a broad Unicode range |
 
+**Divergence from earlier spec drafts:** The spec also calls for "Vazirmatn UI FD" (Farsi-Digits monospace) for terminal/editor use. On current Debian Stable, `fonts-vazirmatn` ships only the proportional family; forcing it into `monospace` would break terminal grid alignment. Monospace is therefore left at the system default, and the Vazirmatn UI FD variant is deferred to Phase 2 (`branding-assets` M2.1).
+
 ---
 
 ## 14. Custom Zurvan Utilities
@@ -261,7 +268,10 @@ Modular tools developed specifically to enhance the user experience in localized
 
 | Package Name | Function / Description |
 |---|---|
-| `zurvan-dns-bypass` | Modular DNS switcher package (allows easy toggle for Shecan, Radar, and default ISP DNS resolving) |
+| `zurvan-base-files` | Project identity package (release version, distributor strings, branding metadata). |
+| `zurvan-dns-bypass` | Modular DNS switcher package (allows easy toggle for Shecan, Radar, and default ISP DNS resolving). |
+
+**Phase note:** `zurvan-dns-bypass` is a custom package built in Phase 2 and published to the Zurvan APT repo. It is not available in the M1.x baseline and is commented in the live-build package list until M2.2 lands it in `repo.zurvanlinux.org`.
 
 ---
 

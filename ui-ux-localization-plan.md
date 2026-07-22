@@ -19,6 +19,7 @@ Legibility is the foundation of a great desktop experience. Zurvan Linux replace
 *   **Default System Interface Font:** `Vazirmatn` (Regular, 10pt) — Used for menus, window titles, panels, and desktop widgets.
 *   **Document & Reading Font:** `Vazirmatn` (Regular, 11pt) — Default for text editors, office suites, and system documentation.
 *   **Monospace (Terminal) Font:** `Vazirmatn UI FD` (Fixed Digits, 10pt) — Tailored specifically for Konsole (the terminal emulator) and text editors to ensure Persian numbers and characters align with standard terminal grid layouts.
+    *Implementation divergence:* On current Debian Stable, `fonts-vazirmatn` ships only the proportional Vazirmatn family. Forcing the Farsi-Digits UI FD variant into `monospace` would break terminal grid alignment, so monospace is intentionally left at the system default until Phase 2 (`branding-assets` M2.1).
 
 ### 2.2 Fontconfig Implementation
 To enforce this typography globally (including in web browsers like Firefox/Chrome and GTK applications), a custom fontconfig XML (`50-zurvan-fonts.conf`) is deployed in the `/etc/fonts/local.conf` system path.
@@ -40,7 +41,7 @@ A seamless bilingual typing experience is vital for Persian developers and users
 *   **Keyboard Layouts:**
     1.  **US English (`us`):** Default layout.
     2.  **Persian (`ir`):** Configured according to the **ISIRI 9147** national standard, ensuring standard placement of Persian characters and easy access to the Zero-Width Non-Joiner (ZWNJ / نیم‌فاصله) via `Shift+Space`.
-*   **Layout Toggling Shortcut:** Pre-configured globally to use `Alt+Shift` (standard for many users migrating from Windows/macOS) or `Super+Space` as an alternative.
+*   **Layout Toggling Shortcut:** Pre-configured as `Alt+Shift` and `Super+Space` simultaneously via `grp:alt_shift_toggle,grp:win_space_toggle` in `/etc/default/keyboard`.
 *   **Visual Indicator:** A clean keyboard layout flags widget is added to the system tray for easy switching and status viewing.
 
 ---

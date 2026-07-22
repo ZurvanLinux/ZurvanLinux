@@ -17,7 +17,21 @@ This repository holds the **source-of-truth specification** for Zurvan Linux —
 
 ## Status
 
-**Phase 1 — specification only.** Documents are evolving; implementation begins once the spec set stabilizes. If prose in a document conflicts with what the codebase eventually does in another repo, trust the codebase but flag the divergence here.
+**M1.1b — ISO build pipeline live.** The `iso-builder` repo has a complete `live-build` + GitHub Actions pipeline producing a KDE Plasma baseline on Debian Stable. Pre-releases are tagged `v0.2.0-pre.N`.
+
+**M1.2 — APT repo publish pipeline live.** The `apt-repository` repo publishes signed indices to GitHub Pages at `https://repo.zurvanlinux.org`.
+
+**M1.3 — Website deployed.** The `website` repo is deployed to GitHub Pages at `https://zurvanlinux.org`.
+
+**Remaining P0 prerequisites (blocking first stable release):**
+- Cloudflare R2 bucket + `download.zurvanlinux.org` custom-domain binding.
+- GitHub Actions secrets for R2 upload.
+- Cloudflare HTTPS enforcement for `zurvanlinux.org`.
+- QA boot-test gate: QEMU/KVM + VirtualBox (BIOS + UEFI).
+
+Documents still contain a small number of flagged divergences where the current
+Debian Stable package set does not match the original spec assumptions. Those are
+documented inline in `package-manifest.md`.
 
 ## Licensing
 
